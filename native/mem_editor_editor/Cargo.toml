@@ -1,0 +1,18 @@
+[package]
+name = "mem_editor_editor"
+version = "0.1.0"
+authors = []
+edition = "2018"
+
+[lib]
+name = "mem_editor_editor"
+path = "src/lib.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+rustler = "0.25.0"
+libc = "0.2"
+mach = "0.3.2"
+
+[target.aarch64-apple-darwin]
+runner = "../.cargo/build.sh"
